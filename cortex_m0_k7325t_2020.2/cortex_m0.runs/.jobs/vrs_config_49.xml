@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="synth_2" LaunchDir="E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.runs/synth_2" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="impl_2" LaunchDir="E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.runs/impl_2" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="post_route_phys_opt_design">
+		<Parent Id="synth_2"/>
+	</Run>
+</Runs>
+

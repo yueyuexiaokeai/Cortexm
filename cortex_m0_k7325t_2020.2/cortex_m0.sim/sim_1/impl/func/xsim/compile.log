@@ -1,0 +1,24 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/jiedan/cortex_m0_c_prog/cortex_m0.sim/sim_1/impl/func/xsim/test_func_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHB2LED
+INFO: [VRFC 10-311] analyzing module AHB2MEM
+INFO: [VRFC 10-311] analyzing module AHB7SEGDEC
+INFO: [VRFC 10-311] analyzing module AHBDCD
+INFO: [VRFC 10-311] analyzing module AHBLITE_SYS
+INFO: [VRFC 10-311] analyzing module AHBMUX
+INFO: [VRFC 10-311] analyzing module AHBTIMER
+INFO: [VRFC 10-311] analyzing module AHBUART
+INFO: [VRFC 10-311] analyzing module BAUDGEN
+INFO: [VRFC 10-311] analyzing module CORTEXM0DS
+INFO: [VRFC 10-311] analyzing module FIFO
+INFO: [VRFC 10-311] analyzing module FIFO__1
+INFO: [VRFC 10-311] analyzing module UART_RX
+INFO: [VRFC 10-311] analyzing module UART_TX
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz_0_clk_wiz
+INFO: [VRFC 10-311] analyzing module cortexm0ds_logic
+INFO: [VRFC 10-311] analyzing module pb_debounce
+INFO: [VRFC 10-311] analyzing module prescaler
+INFO: [VRFC 10-311] analyzing module prescaler__1
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sim_1/new/test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test

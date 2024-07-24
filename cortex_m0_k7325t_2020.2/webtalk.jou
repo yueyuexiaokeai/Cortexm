@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Thu Apr 21 22:31:23 2016
+# Process ID: 17184
+# Current directory: E:/cortex-m0_example/cortex_m0
+# Command line: wbtcv.exe -mode batch -source E:/cortex-m0_example/cortex_m0/cortex_m0.hw/webtalk/labtool_webtalk.tcl -notrace
+# Log file: E:/cortex-m0_example/cortex_m0/webtalk.log
+# Journal file: E:/cortex-m0_example/cortex_m0\webtalk.jou
+#-----------------------------------------------------------
+source E:/cortex-m0_example/cortex_m0/cortex_m0.hw/webtalk/labtool_webtalk.tcl -notrace

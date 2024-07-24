@@ -1,0 +1,492 @@
+#-----------------------------------------------------------
+# Vivado v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Tue May 10 15:00:22 2016
+# Process ID: 37584
+# Current directory: E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.runs/synth_2
+# Command line: vivado.exe -log AHBLITE_SYS.vds -mode batch -messageDb vivado.pb -notrace -source AHBLITE_SYS.tcl
+# Log file: E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.runs/synth_2/AHBLITE_SYS.vds
+# Journal file: E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.runs/synth_2\vivado.jou
+#-----------------------------------------------------------
+source AHBLITE_SYS.tcl -notrace
+Command: synth_design -top AHBLITE_SYS -part xc7a75tfgg484-1 -flatten_hierarchy none -fanout_limit 400 -fsm_extraction one_hot -keep_equivalent_registers -resource_sharing off -no_lc -shreg_min_size 5
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a75t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a75t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 38680 
+WARNING: [Synth 8-2292] literal value truncated to fit in 16 bits [E:/cortex-m0_example/source/AHB7SEGDEC_V1.v:101]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 326.754 ; gain = 118.527
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'AHBLITE_SYS' [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:38]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.runs/synth_2/.Xil/Vivado-37584-hebin-PC/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.runs/synth_2/.Xil/Vivado-37584-hebin-PC/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'CORTEXM0DS' [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/CORTEXM0DS.v:27]
+INFO: [Synth 8-638] synthesizing module 'cortexm0ds_logic' [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/cortexm0ds_logic.v:27]
+INFO: [Synth 8-256] done synthesizing module 'cortexm0ds_logic' (2#1) [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/cortexm0ds_logic.v:27]
+INFO: [Synth 8-256] done synthesizing module 'CORTEXM0DS' (3#1) [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/CORTEXM0DS.v:27]
+INFO: [Synth 8-638] synthesizing module 'AHBDCD' [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBDCD.v:38]
+INFO: [Synth 8-256] done synthesizing module 'AHBDCD' (4#1) [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBDCD.v:38]
+INFO: [Synth 8-638] synthesizing module 'AHBMUX' [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBMUX.v:38]
+INFO: [Synth 8-256] done synthesizing module 'AHBMUX' (5#1) [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBMUX.v:38]
+INFO: [Synth 8-638] synthesizing module 'AHB2MEM' [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHB2BRAM.v:11]
+	Parameter MEMWIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'code.hex' is read successfully [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHB2BRAM.v:52]
+INFO: [Synth 8-256] done synthesizing module 'AHB2MEM' (6#1) [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHB2BRAM.v:11]
+WARNING: [Synth 8-350] instance 'uAHB2MEM' of module 'AHB2MEM' requires 12 connections, but only 11 given [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:198]
+INFO: [Synth 8-638] synthesizing module 'AHB2LED' [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHB2LED.v:1]
+INFO: [Synth 8-256] done synthesizing module 'AHB2LED' (7#1) [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHB2LED.v:1]
+INFO: [Synth 8-638] synthesizing module 'AHB7SEGDEC' [E:/cortex-m0_example/source/AHB7SEGDEC_V1.v:38]
+INFO: [Synth 8-226] default block is never used [E:/cortex-m0_example/source/AHB7SEGDEC_V1.v:163]
+INFO: [Synth 8-256] done synthesizing module 'AHB7SEGDEC' (8#1) [E:/cortex-m0_example/source/AHB7SEGDEC_V1.v:38]
+INFO: [Synth 8-256] done synthesizing module 'AHBLITE_SYS' (9#1) [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:38]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[31]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[30]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[29]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[28]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[27]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[26]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[25]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[24]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[23]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[22]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[21]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[20]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[19]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[18]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[17]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[16]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[15]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[14]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[13]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[12]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[11]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[10]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[9]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[8]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[7]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[6]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[5]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[4]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[3]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[2]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[1]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HADDR[0]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HSIZE[2]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HSIZE[1]
+WARNING: [Synth 8-3331] design AHB7SEGDEC has unconnected port HSIZE[0]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[31]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[30]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[29]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[28]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[27]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[26]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[25]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[24]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[23]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[22]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[21]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[20]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[19]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[18]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[17]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[16]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[15]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[14]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[13]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[12]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[11]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[10]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[9]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[8]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[7]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[6]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[5]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[4]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[3]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[2]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[1]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HADDR[0]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HSIZE[2]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HSIZE[1]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HSIZE[0]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[31]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[30]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[29]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[28]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[27]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[26]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[25]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[24]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[23]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[22]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[21]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[20]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[19]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[18]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[17]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[16]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[15]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[14]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[13]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[12]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[11]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[10]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[9]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[8]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[23]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[22]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[21]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[20]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[19]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[18]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 478.371 ; gain = 270.145
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[31] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[30] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[29] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[28] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[27] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[26] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[25] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[24] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[23] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[22] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[21] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[20] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[19] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[18] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[17] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[16] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[15] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[14] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[13] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[12] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[11] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[10] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[9] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[8] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[7] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[6] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[5] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[4] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[3] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[2] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[1] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S3[0] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[31] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[30] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[29] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[28] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[27] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[26] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[25] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[24] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[23] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[22] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[21] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[20] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[19] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[18] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[17] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[16] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[15] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[14] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[13] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[12] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[11] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[10] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[9] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[8] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[7] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[6] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[5] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[4] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[3] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[2] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[1] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S4[0] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[31] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[30] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[29] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[28] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[27] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[26] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[25] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[24] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[23] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[22] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[21] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[20] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[19] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[18] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[17] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[16] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[15] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[14] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[13] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[12] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[11] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[10] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[9] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[8] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[7] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[6] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[5] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[4] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[3] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[2] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[1] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S5[0] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S6[31] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S6[30] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S6[29] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+WARNING: [Synth 8-3295] tying undriven pin uAHBMUX:HRDATA_S6[28] to constant 0 [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:162]
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 478.371 ; gain = 270.145
+---------------------------------------------------------------------------------
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'clk_wiz_0' instantiated as 'Inst_clk_wiz_0' [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:98]
+INFO: [Device 21-403] Loading part xc7a75tfgg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.runs/synth_2/.Xil/Vivado-37584-hebin-PC/dcp/clk_wiz_0_in_context.xdc] for cell 'Inst_clk_wiz_0'
+Finished Parsing XDC File [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.runs/synth_2/.Xil/Vivado-37584-hebin-PC/dcp/clk_wiz_0_in_context.xdc] for cell 'Inst_clk_wiz_0'
+Parsing XDC File [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:24]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:25]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:26]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:27]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:28]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:29]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:30]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:31]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:32]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:33]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:34]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:35]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:36]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:37]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:38]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:39]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:40]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:41]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:42]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:43]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:44]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:45]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:46]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot set load on pre-synthesized design.  Please open a synthesized design (or synthesize the current design) and rerun this command. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:47]
+WARNING: [Vivado 12-507] No nets matched 'CLK_IBUF'. [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc:52]
+Finished Parsing XDC File [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/AHBLITE_SYS_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.srcs/constrs_1/new/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/AHBLITE_SYS_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/AHBLITE_SYS_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 837.156 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 837.156 ; gain = 628.930
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a75tfgg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 837.156 ; gain = 628.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for CLK. (constraint file  E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.runs/synth_2/.Xil/Vivado-37584-hebin-PC/dcp/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK. (constraint file  E:/cortex-m0_example/cortex_m0_seg7/cortex_m0.runs/synth_2/.Xil/Vivado-37584-hebin-PC/dcp/clk_wiz_0_in_context.xdc, line 4).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 837.156 ; gain = 628.930
+---------------------------------------------------------------------------------
+INFO: Vivado Synthesis caught shared memory exception '系统找不到指定的文件。'. Continuing without using shared memory (or continuing without helper parallel flow)
+INFO: [Synth 8-5546] ROM "dec" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MUX_SEL" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "scan_clk" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 837.156 ; gain = 628.930
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     34 Bit       Adders := 2     
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input     30 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 59    
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 848   
++---RAMs : 
+	               8K Bit         RAMs := 1     
++---Muxes : 
+	  11 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	  16 Input      7 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 1     
+	   9 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 331   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module cortexm0ds_logic 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     34 Bit       Adders := 2     
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input     30 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 59    
++---Registers : 
+	                1 Bit    Registers := 841   
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 330   
+Module AHBDCD 
+Detailed RTL Component Info : 
++---Muxes : 
+	  11 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 1     
+Module AHBMUX 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module AHB2MEM 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	               8K Bit         RAMs := 1     
+Module AHB2LED 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+Module AHB7SEGDEC 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	  16 Input      7 Bit        Muxes := 1     
+	   9 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 180 (col length:80)
+BRAMs: 210 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 837.156 ; gain = 628.930
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "dec" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "MUX_SEL" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "scan_clk" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 837.156 ; gain = 628.930
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 837.156 ; gain = 628.930
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+------------+-----------+----------------------+------------------+
+|Module Name | RTL Object | Inference | Size (Depth x Width) | Primitives       | 
++------------+------------+-----------+----------------------+------------------+
+|AHB2MEM     | memory_reg | Implied   | 256 x 32             | RAM128X1D x 64   | 
++------------+------------+-----------+----------------------+------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm0ds/u_logic/Mvi2z4_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm0ds/u_logic/W8r2z4_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm0ds/u_logic/Etq2z4_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm0ds/u_logic/Q4h3z4_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm0ds/u_logic/C7f3z4_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm0ds/u_logic/Q0f3z4_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm0ds/u_logic/Qnn2z4_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm0ds/u_logic/Jje3z4_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm0ds/u_logic/Zqb3z4_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm0ds/u_logic/E9c3z4_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm0ds/u_logic/Yvb3z4_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm0ds/u_logic/Qsb3z4_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm0ds/u_logic/Rnb3z4_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm0ds/u_logic/W5c3z4_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm0ds/u_logic/O2c3z4_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm0ds/u_logic/Gzb3z4_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm0ds/u_logic/I6h3z4_reg)

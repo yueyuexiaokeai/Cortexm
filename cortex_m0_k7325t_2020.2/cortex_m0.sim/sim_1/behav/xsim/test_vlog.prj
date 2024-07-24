@@ -1,0 +1,27 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../cortex_m0.srcs/sources_1/ip/clk_wiz_0" \
+"../../../../cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
+"../../../../cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" \
+"../../../../cortex_m0.srcs/sources_1/imports/source/AHB2BRAM.v" \
+"../../../../cortex_m0.srcs/sources_1/imports/source/AHB2LED.v" \
+"../../../../cortex_m0.srcs/sources_1/imports/source/AHB7SEGDEC_V1.v" \
+"../../../../cortex_m0.srcs/sources_1/imports/source/AHBDCD.v" \
+"../../../../cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v" \
+"../../../../cortex_m0.srcs/sources_1/imports/source/AHBMUX.v" \
+"../../../../cortex_m0.srcs/sources_1/imports/source/AHBTIMER.v" \
+"../../../../cortex_m0.srcs/sources_1/imports/source/AHBUART.v" \
+"../../../../cortex_m0.srcs/sources_1/imports/source/CORTEXM0DS.v" \
+"../../../../cortex_m0.srcs/sources_1/imports/source/baudgen.v" \
+"../../../../cortex_m0.srcs/sources_1/imports/source/cortexm0ds_logic.v" \
+"../../../../cortex_m0.srcs/sources_1/imports/source/fifo.v" \
+"../../../../cortex_m0.srcs/sources_1/imports/source/pb_debounce.v" \
+"../../../../cortex_m0.srcs/sources_1/imports/source/prescaler.v" \
+"../../../../cortex_m0.srcs/sources_1/imports/source/uart_rx.v" \
+"../../../../cortex_m0.srcs/sources_1/imports/source/uart_tx.v" \
+"../../../../cortex_m0.srcs/sim_1/new/test.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

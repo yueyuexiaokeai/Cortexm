@@ -1,0 +1,62 @@
+#-----------------------------------------------------------
+# Vivado v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Thu Apr 21 15:16:36 2016
+# Process ID: 10060
+# Current directory: E:/cortex-m0_example/cortex_m0
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13564 E:\cortex-m0_example\cortex_m0\cortex_m0.xpr
+# Log file: E:/cortex-m0_example/cortex_m0/vivado.log
+# Journal file: E:/cortex-m0_example/cortex_m0\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/cortex-m0_example/cortex_m0/cortex_m0.xpr
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+close_design
+open_run synth_1 -name synth_1
+synth_design -rtl -name rtl_1
+launch_simulation -mode post-implementation -type timing
+source test.tcl
+close_sim
+place_ports {LED[0]} Y17
+place_ports {LED[1]} Y16
+place_ports {LED[2]} AA16
+place_ports {LED[3]} AB16
+place_ports {LED[4]} AB17
+place_ports {LED[5]} AA13
+place_ports {LED[6]} AB13
+place_ports {LED[7]} AA15
+place_ports CLK K19
+place_ports RESET T5
+set_property target_constrs_file E:/cortex-m0_example/cortex_m0/cortex_m0.srcs/constrs_1/new/top.xdc [current_fileset -constrset]
+save_constraints -force
+open_hw
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {E:/cortex-m0_example/cortex_m0/cortex_m0.runs/impl_1/AHBLITE_SYS.bit} [lindex [get_hw_devices] 0]
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {E:/cortex-m0_example/cortex_m0/cortex_m0.runs/impl_1/AHBLITE_SYS.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+close_hw
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {E:/cortex-m0_example/cortex_m0/cortex_m0.runs/impl_1/AHBLITE_SYS.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+close_hw
+close_project
+create_project cortex_m0_seg7 E:/cortex-m0_example/cortex_m0_seg7 -part xc7a75tfgg484-1

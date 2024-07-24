@@ -1,0 +1,4 @@
+Dependencies for Project 'top', Target 'Target 1': (DO NOT MODIFY !)
+F (.\cm0dsasm.s)(0x57541CAE)(--cpu Cortex-M0 --li -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0--pd "__UVISION_VERSION SETA 527" --pd "ARMCM0 SETA 1"--list .\listings\cm0dsasm.lst --xref -o .\objects\cm0dsasm.o --depend .\objects\cm0dsasm.d)
+F (.\main.c)(0x603CB833)(-c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0-D__UVISION_VERSION="527" -DARMCM0-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (system.h)(0x57541CE7)

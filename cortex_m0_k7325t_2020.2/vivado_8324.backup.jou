@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Fri Feb 19 10:37:47 2021
+# Process ID: 8324
+# Current directory: D:/jiedan/cortex_m0_c_prog
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15292 D:\jiedan\cortex_m0_c_prog\cortex_m0.xpr
+# Log file: D:/jiedan/cortex_m0_c_prog/vivado.log
+# Journal file: D:/jiedan/cortex_m0_c_prog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/jiedan/cortex_m0_c_prog/cortex_m0.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation -mode post-implementation -type functional
+close_design

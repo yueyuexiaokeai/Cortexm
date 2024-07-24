@@ -1,0 +1,918 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Feb 18 17:17:22 2021
+# Process ID: 13788
+# Current directory: D:/jiedan/cortex_m0_c_prog
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8588 D:\jiedan\cortex_m0_c_prog\cortex_m0.xpr
+# Log file: D:/jiedan/cortex_m0_c_prog/vivado.log
+# Journal file: D:/jiedan/cortex_m0_c_prog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/jiedan/cortex_m0_c_prog/cortex_m0.xpr
+INFO: [Project 1-313] Project file moved from 'E:/cortex-m0_example/cortex_m0_c_prog' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/vivado2020/az/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'clk_wiz_0' is locked:
+* IP definition 'Clocking Wizard (5.3)' for IP 'clk_wiz_0' (customized with software release 2016.1) has a newer major version in the IP Catalog.
+INFO: [Project 1-230] Project 'cortex_m0.xpr' upgraded for this version of Vivado.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 1077.203 ; gain = 0.000
+report_ip_status -name ip_status 
+update_compile_order -fileset sources_1
+upgrade_ip -srcset clk_wiz_0 -vlnv xilinx.com:ip:clk_wiz:6.0 [get_ips  clk_wiz_0] -log ip_upgrade.log
+Upgrading 'clk_wiz_0'
+INFO: [Project 1-386] Moving file 'D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci' from fileset 'clk_wiz_0' to fileset 'sources_1'.
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_CLKIN1_PERIOD' from '10.000' to '10.0' has been ignored for IP 'clk_wiz_0'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_CLKIN2_PERIOD' from '10.000' to '10.0' has been ignored for IP 'clk_wiz_0'
+WARNING: [IP_Flow 19-3501] Upgraded clk_wiz_0 from Clocking Wizard 5.3 to Clocking Wizard 6.0, with warnings. Please review the message log.
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'clk_wiz_0' has identified issues that may require user intervention. Please review the upgrade log 'd:/jiedan/cortex_m0_c_prog/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/jiedan/cortex_m0_c_prog/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips clk_wiz_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+update_compile_order -fileset sources_1
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7a75tfgg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1274.902 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1247 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Constraints 18-4397] Generator change detected checking ShapeConfig Enum. shapeDB will be regenerated.
+Parsing XDC File [D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_1/AHBLITE_SYS_postroute_physopt/AHBLITE_SYS_early.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [e:/cortex-m0_example/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [e:/cortex-m0_example/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1979.562 ; gain = 582.184
+Finished Parsing XDC File [D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_1/AHBLITE_SYS_postroute_physopt/AHBLITE_SYS_early.xdc]
+Parsing XDC File [D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_1/AHBLITE_SYS_postroute_physopt/AHBLITE_SYS.xdc]
+Finished Parsing XDC File [D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_1/AHBLITE_SYS_postroute_physopt/AHBLITE_SYS.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1979.562 ; gain = 0.000
+Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1979.562 ; gain = 0.000
+WARNING: [Designutils 20-3624] Found incompatible version of design analysis file contained in checkpoint D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_1/AHBLITE_SYS_postroute_physopt.dcp. Use a design checkpoint generated with latest release.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1979.562 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1028 instances were transformed.
+  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 1024 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
+
+WARNING: [Designutils 20-3624] Found incompatible version of design analysis file contained in checkpoint D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_1/AHBLITE_SYS_postroute_physopt.dcp. Use a design checkpoint generated with latest release.
+open_run: Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 2030.828 ; gain = 910.801
+close_design
+copy_run -name impl_1_copy_1 [get_runs impl_1] -parent_run synth_1
+impl_1_copy_1
+set_property part xc7k325tffg676-2 [current_project]
+WARNING: [IP_Flow 19-2162] IP 'clk_wiz_0' is locked:
+* Current project part 'xc7k325tffg676-2' and the part 'xc7a75tfgg484-1' used to customize the IP 'clk_wiz_0' do not match.
+reset_run synth_1
+launch_runs impl_1 -jobs 12
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Project 1-576] IP 'D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci' in run clk_wiz_0_synth_1 is locked, no out-of-context (OOC) run will be launched. The run may not be able to complete.
+Please select 'Report IP Status' from 'Tools/Report' or run the Tcl command 'report_ip_status' for more information.
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Implementation target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+
+WARNING: [Project 1-576] IP 'D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci' in run clk_wiz_0_synth_1 is locked, no out-of-context (OOC) run will be launched. The run may not be able to complete.
+Please select 'Report IP Status' from 'Tools/Report' or run the Tcl command 'report_ip_status' for more information.
+[Thu Feb 18 17:58:09 2021] Launched clk_wiz_0_synth_1, synth_1...
+Run output will be captured here:
+clk_wiz_0_synth_1: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/clk_wiz_0_synth_1/runme.log
+synth_1: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/synth_1/runme.log
+[Thu Feb 18 17:58:09 2021] Launched impl_1...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_1/runme.log
+reset_run synth_1
+reset_run clk_wiz_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/clk_wiz_0_synth_1
+
+current_run [get_runs impl_1_copy_1]
+delete_runs "impl_1"
+set_property part xc7k325tffg676-2 [get_runs impl_1_copy_1]
+set_property name impl_k7 [get_runs impl_1_copy_1]
+launch_runs impl_k7 -jobs 12
+WARNING: [Project 1-576] IP 'D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci' in run clk_wiz_0_synth_1 is locked, no out-of-context (OOC) run will be launched. The run may not be able to complete.
+Please select 'Report IP Status' from 'Tools/Report' or run the Tcl command 'report_ip_status' for more information.
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Implementation target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+
+WARNING: [Project 1-576] IP 'D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci' in run clk_wiz_0_synth_1 is locked, no out-of-context (OOC) run will be launched. The run may not be able to complete.
+Please select 'Report IP Status' from 'Tools/Report' or run the Tcl command 'report_ip_status' for more information.
+[Thu Feb 18 17:59:56 2021] Launched clk_wiz_0_synth_1, synth_1...
+Run output will be captured here:
+clk_wiz_0_synth_1: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/clk_wiz_0_synth_1/runme.log
+synth_1: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/synth_1/runme.log
+[Thu Feb 18 17:59:56 2021] Launched impl_k7...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/runme.log
+reset_run synth_1
+reset_run clk_wiz_0_synth_1
+upgrade_ip -srcset clk_wiz_0 -vlnv xilinx.com:ip:clk_wiz:6.0 [get_ips  clk_wiz_0] -log ip_upgrade.log
+Upgrading 'clk_wiz_0'
+INFO: [Project 1-386] Moving file 'D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci' from fileset 'clk_wiz_0' to fileset 'sources_1'.
+INFO: [IP_Flow 19-3420] Updated clk_wiz_0 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/jiedan/cortex_m0_c_prog/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips clk_wiz_0] -no_script -sync -force -quiet
+set_property -dict [list CONFIG.PRIMITIVE {MMCM} CONFIG.PRIM_IN_FREQ {50.000} CONFIG.CLKIN1_JITTER_PS {200.0} CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT2_DRIVES {BUFG} CONFIG.CLKOUT3_DRIVES {BUFG} CONFIG.CLKOUT4_DRIVES {BUFG} CONFIG.CLKOUT5_DRIVES {BUFG} CONFIG.CLKOUT6_DRIVES {BUFG} CONFIG.CLKOUT7_DRIVES {BUFG} CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_BANDWIDTH {OPTIMIZED} CONFIG.MMCM_CLKFBOUT_MULT_F {18.250} CONFIG.MMCM_CLKIN1_PERIOD {20.000} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.MMCM_COMPENSATION {ZHOLD} CONFIG.MMCM_CLKOUT0_DIVIDE_F {36.500} CONFIG.CLKOUT1_JITTER {244.752} CONFIG.CLKOUT1_PHASE_ERROR {159.385}] [get_ips clk_wiz_0]
+generate_target all [get_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+export_ip_user_files -of_objects [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+launch_runs clk_wiz_0_synth_1 -jobs 12
+[Thu Feb 18 18:01:12 2021] Launched clk_wiz_0_synth_1...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/clk_wiz_0_synth_1/runme.log
+export_simulation -of_objects [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory D:/jiedan/cortex_m0_c_prog/cortex_m0.ip_user_files/sim_scripts -ip_user_files_dir D:/jiedan/cortex_m0_c_prog/cortex_m0.ip_user_files -ipstatic_source_dir D:/jiedan/cortex_m0_c_prog/cortex_m0.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/modelsim} {questa=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/questa} {riviera=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/riviera} {activehdl=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_runs impl_k7 -jobs 12
+[Thu Feb 18 18:01:22 2021] Launched clk_wiz_0_synth_1, synth_1...
+Run output will be captured here:
+clk_wiz_0_synth_1: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/clk_wiz_0_synth_1/runme.log
+synth_1: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/synth_1/runme.log
+[Thu Feb 18 18:01:22 2021] Launched impl_k7...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/runme.log
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/constrs_1/new/top.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/constrs_1/new/top.xdc
+file delete -force D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/constrs_1/new/top.xdc
+reset_run synth_1
+launch_runs impl_k7 -jobs 12
+[Thu Feb 18 18:06:08 2021] Launched synth_1...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/synth_1/runme.log
+[Thu Feb 18 18:06:09 2021] Launched impl_k7...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/runme.log
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {20.000} CONFIG.MMCM_CLKFBOUT_MULT_F {20.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {50.000} CONFIG.CLKOUT1_JITTER {249.363} CONFIG.CLKOUT1_PHASE_ERROR {164.985}] [get_ips clk_wiz_0]
+generate_target all [get_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+export_ip_user_files -of_objects [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_0_synth_1
+launch_runs clk_wiz_0_synth_1 -jobs 12
+[Thu Feb 18 19:09:48 2021] Launched clk_wiz_0_synth_1...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/clk_wiz_0_synth_1/runme.log
+export_simulation -of_objects [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory D:/jiedan/cortex_m0_c_prog/cortex_m0.ip_user_files/sim_scripts -ip_user_files_dir D:/jiedan/cortex_m0_c_prog/cortex_m0.ip_user_files -ipstatic_source_dir D:/jiedan/cortex_m0_c_prog/cortex_m0.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/modelsim} {questa=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/questa} {riviera=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/riviera} {activehdl=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/synth_1
+
+launch_runs impl_k7 -jobs 12
+[Thu Feb 18 19:10:00 2021] Launched clk_wiz_0_synth_1, synth_1...
+Run output will be captured here:
+clk_wiz_0_synth_1: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/clk_wiz_0_synth_1/runme.log
+synth_1: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/synth_1/runme.log
+[Thu Feb 18 19:10:00 2021] Launched impl_k7...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/runme.log
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_k7 -jobs 12
+[Thu Feb 18 19:28:01 2021] Launched synth_1...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/synth_1/runme.log
+[Thu Feb 18 19:28:01 2021] Launched impl_k7...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/synth_1
+
+launch_runs impl_k7 -jobs 12
+[Thu Feb 18 19:30:11 2021] Launched synth_1...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/synth_1/runme.log
+[Thu Feb 18 19:30:11 2021] Launched impl_k7...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/runme.log
+open_run impl_k7
+INFO: [Device 21-403] Loading part xc7k325tffg676-2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 2324.395 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1228 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3070.602 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3070.602 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 3070.602 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1028 instances were transformed.
+  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 1024 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
+
+open_run: Time (s): cpu = 00:00:23 ; elapsed = 00:00:19 . Memory (MB): peak = 3190.441 ; gain = 882.090
+close_design
+reset_run synth_1
+launch_runs impl_k7 -jobs 12
+[Thu Feb 18 19:50:29 2021] Launched synth_1...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/synth_1/runme.log
+[Thu Feb 18 19:50:30 2021] Launched impl_k7...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/runme.log
+open_run impl_k7
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 3411.020 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1228 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3411.020 ; gain = 0.000
+Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3411.020 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 3411.020 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1028 instances were transformed.
+  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 1024 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
+
+open_run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 3417.773 ; gain = 6.754
+close_design
+set_property -dict [list CONFIG.RESET_TYPE {ACTIVE_LOW} CONFIG.RESET_PORT {resetn}] [get_ips clk_wiz_0]
+generate_target all [get_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+export_ip_user_files -of_objects [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_0_synth_1
+launch_runs clk_wiz_0_synth_1 -jobs 12
+[Thu Feb 18 20:02:21 2021] Launched clk_wiz_0_synth_1...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/clk_wiz_0_synth_1/runme.log
+export_simulation -of_objects [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory D:/jiedan/cortex_m0_c_prog/cortex_m0.ip_user_files/sim_scripts -ip_user_files_dir D:/jiedan/cortex_m0_c_prog/cortex_m0.ip_user_files -ipstatic_source_dir D:/jiedan/cortex_m0_c_prog/cortex_m0.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/modelsim} {questa=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/questa} {riviera=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/riviera} {activehdl=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_k7 -jobs 12
+[Thu Feb 18 20:08:17 2021] Launched synth_1...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/synth_1/runme.log
+[Thu Feb 18 20:08:18 2021] Launched impl_k7...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/runme.log
+open_run impl_k7
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 3480.469 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1228 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3480.469 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3480.469 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 3480.469 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1028 instances were transformed.
+  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 1024 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
+
+open_run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 3485.074 ; gain = 4.605
+set_property IOSTANDARD LVCMOS33 [get_ports [list {LED[7]} {LED[6]} {LED[5]} {LED[4]} {LED[3]} {LED[2]} {LED[1]} {LED[0]}]]
+place_ports {LED[7]} E25
+place_ports {LED[6]} D25
+place_ports {LED[5]} D24
+place_ports {LED[4]} C26
+place_ports {LED[3]} C24
+place_ports {LED[2]} D23
+place_ports {LED[1]} A24
+place_ports {LED[0]} A23
+place_ports CLK G22
+place_ports btn D26
+place_ports rst_n G25
+set_property IOSTANDARD LVCMOS33 [get_ports [list btn]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list CLK]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list rst_n]]
+place_ports rx B17
+place_ports tx A17
+set_property IOSTANDARD LVCMOS33 [get_ports [list rx]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list tx]]
+close [ open D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/constrs_1/new/m0.xdc w ]
+add_files -fileset constrs_1 D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/constrs_1/new/m0.xdc
+set_property target_constrs_file D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/constrs_1/new/m0.xdc [current_fileset -constrset]
+save_constraints -force
+close_design
+reset_run synth_1
+launch_runs impl_k7 -to_step write_bitstream -jobs 12
+[Thu Feb 18 20:22:17 2021] Launched synth_1...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/synth_1/runme.log
+[Thu Feb 18 20:22:18 2021] Launched impl_k7...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/synth_1
+
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/software/code.hex] -no_script -reset -force -quiet
+remove_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/software/code.hex
+file delete -force D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/software/code.hex
+import_files -norecurse D:/jiedan/cortex_m0_c_prog/code.hex
+set_property file_type {Memory Initialization Files} [get_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code.hex]
+launch_runs impl_k7 -to_step write_bitstream -jobs 12
+[Thu Feb 18 20:26:09 2021] Launched synth_1...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/synth_1/runme.log
+[Thu Feb 18 20:26:09 2021] Launched impl_k7...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/runme.log
+reset_run synth_1
+launch_runs impl_k7 -to_step write_bitstream -jobs 12
+[Thu Feb 18 20:32:59 2021] Launched synth_1...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/synth_1/runme.log
+[Thu Feb 18 20:32:59 2021] Launched impl_k7...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1
+  **** Build date : May 27 2020 at 20:24:38
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 14 2020-09:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 3623.754 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210251A08870
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 4671.582 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210251A08870
+close_hw_manager
+update_files -from_files D:/jiedan/cortex_m0_c_prog/code_uart.hex -to_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code.hex -filesets [get_filesets *]
+INFO: [filemgmt 20-762] Replacing file 'D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code.hex' with file 'D:/jiedan/cortex_m0_c_prog/code_uart.hex'.
+INFO: [filemgmt 20-1080] Importing file from 'D:/jiedan/cortex_m0_c_prog/code_uart.hex' to 'D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code_uart.hex'.
+reset_run synth_1
+launch_runs impl_k7 -to_step write_bitstream -jobs 12
+[Fri Feb 19 00:01:30 2021] Launched synth_1...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/synth_1/runme.log
+[Fri Feb 19 00:01:30 2021] Launched impl_k7...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1
+  **** Build date : May 27 2020 at 20:24:38
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 14 2020-09:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 4706.570 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210251A08870
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 4706.609 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+open_run impl_k7
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 4706.609 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1224 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 4931.969 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 4931.969 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 4931.969 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1028 instances were transformed.
+  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 1024 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
+
+open_run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 5013.402 ; gain = 306.793
+close_design
+open_run impl_k7
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 5170.426 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1224 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 5170.426 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 5170.426 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 5170.426 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1028 instances were transformed.
+  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 1024 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
+
+open_run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 5170.426 ; gain = 0.000
+show_objects -name memory [get_cells -hierarchical -filter { PRIMITIVE_TYPE =~ CARRY.*.* } ]
+close_design
+open_run impl_k7
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 5278.879 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1224 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 5278.879 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 5278.879 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 5278.879 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1028 instances were transformed.
+  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 1024 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
+
+open_run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 5278.879 ; gain = 0.000
+show_objects [get_cells -hierarchical -filter { PRIMITIVE_TYPE =~ DMEM.dram.* } ]
+close_design
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/AHBVGASYS.v] -no_script -reset -force -quiet
+remove_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/AHBVGASYS.v
+file delete -force D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/AHBVGASYS.v
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/vga_sync.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/vga_console.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/vga_image.v] -no_script -reset -force -quiet
+remove_files  {D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/vga_sync.v D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/vga_console.v D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/vga_image.v}
+file delete -force D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/vga_sync.v D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/vga_console.v D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/vga_image.v
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/counter.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/dual_port_ram_sync.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/font_rom.v] -no_script -reset -force -quiet
+remove_files  {D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/counter.v D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/dual_port_ram_sync.v D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/font_rom.v}
+file delete -force D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/counter.v D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/dual_port_ram_sync.v D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/font_rom.v
+update_files -from_files D:/jiedan/cortex_m0_c_prog/code_uart.hex -to_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code_uart.hex -filesets [get_filesets *]
+INFO: [filemgmt 20-762] Replacing file 'D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code_uart.hex' with file 'D:/jiedan/cortex_m0_c_prog/code_uart.hex'.
+INFO: [filemgmt 20-1080] Importing file from 'D:/jiedan/cortex_m0_c_prog/code_uart.hex' to 'D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code_uart.hex'.
+reset_run impl_k7 -prev_step 
+launch_runs impl_k7 -to_step write_bitstream -jobs 12
+[Fri Feb 19 00:57:09 2021] Launched impl_k7...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1
+  **** Build date : May 27 2020 at 20:24:38
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 14 2020-09:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 5278.879 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210251A08870
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 5278.879 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+update_files -from_files D:/jiedan/cortex_m0_c_prog/code_uartb.hex -to_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code_uart.hex -filesets [get_filesets *]
+INFO: [filemgmt 20-762] Replacing file 'D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code_uart.hex' with file 'D:/jiedan/cortex_m0_c_prog/code_uartb.hex'.
+INFO: [filemgmt 20-1080] Importing file from 'D:/jiedan/cortex_m0_c_prog/code_uartb.hex' to 'D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code_uartb.hex'.
+reset_run synth_1
+launch_runs impl_k7 -to_step write_bitstream -jobs 12
+[Fri Feb 19 01:00:46 2021] Launched synth_1...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/synth_1/runme.log
+[Fri Feb 19 01:00:46 2021] Launched impl_k7...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1
+  **** Build date : May 27 2020 at 20:24:38
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 14 2020-09:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 5278.879 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210251A08870
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 5278.879 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code_uartb.hex] -no_script -reset -force -quiet
+remove_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code_uartb.hex
+file delete -force D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code_uartb.hex
+import_files -force -norecurse D:/jiedan/cortex_m0_c_prog/code.hex
+set_property file_type {Memory Initialization Files} [get_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code.hex]
+reset_run synth_1
+launch_runs impl_k7 -to_step write_bitstream -jobs 12
+[Fri Feb 19 09:22:31 2021] Launched synth_1...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/synth_1/runme.log
+[Fri Feb 19 09:22:31 2021] Launched impl_k7...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1
+  **** Build date : May 27 2020 at 20:24:38
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 14 2020-09:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 5278.879 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210251A08870
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 5278.879 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210251A08870
+close_hw_manager
+open_hw_manager
+close_hw_manager
+open_hw_manager
+close_hw_manager
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code.hex] -no_script -reset -force -quiet
+remove_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code.hex
+file delete -force D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code.hex
+import_files -norecurse D:/jiedan/cortex_m0_c_prog/code.hex
+set_property file_type {Memory Initialization Files} [get_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code.hex]
+reset_run impl_k7 -prev_step 
+launch_runs impl_k7 -to_step write_bitstream -jobs 12
+[Fri Feb 19 09:47:28 2021] Launched impl_k7...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1
+  **** Build date : May 27 2020 at 20:24:38
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 14 2020-09:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 5278.879 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210251A08870
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 5278.879 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+reset_run impl_k7
+launch_runs impl_k7 -jobs 12
+[Fri Feb 19 09:50:03 2021] Launched impl_k7...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/runme.log
+launch_runs impl_k7 -to_step write_bitstream -jobs 12
+[Fri Feb 19 09:53:04 2021] Launched impl_k7...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1
+  **** Build date : May 27 2020 at 20:24:38
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 14 2020-09:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 5278.879 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210251A08870
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 5278.879 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code.hex] -no_script -reset -force -quiet
+remove_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code.hex
+file delete -force D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code.hex
+import_files -norecurse D:/jiedan/cortex_m0_c_prog/code_led.hex
+set_property file_type {Memory Initialization Files} [get_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code_led.hex]
+reset_run synth_1
+launch_runs impl_k7 -to_step write_bitstream -jobs 12
+[Fri Feb 19 10:01:28 2021] Launched synth_1...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/synth_1/runme.log
+[Fri Feb 19 10:01:28 2021] Launched impl_k7...
+Run output will be captured here: D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1
+  **** Build date : May 27 2020 at 20:24:38
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 14 2020-09:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 5278.879 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210251A08870
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 5278.879 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/jiedan/cortex_m0_c_prog/cortex_m0.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/vivado2020/az/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'D:/jiedan/cortex_m0_c_prog/cortex_m0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/jiedan/cortex_m0_c_prog/cortex_m0.sim/sim_1/behav/xsim/code_led.hex'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/jiedan/cortex_m0_c_prog/cortex_m0.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/AHB2BRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHB2MEM
+INFO: [VRFC 10-2458] undeclared symbol zeroth_location, assumed default net type wire [D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/AHB2BRAM.v:120]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/AHB2LED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHB2LED
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/AHB7SEGDEC_V1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHB7SEGDEC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/AHBDCD.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHBDCD
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHBLITE_SYS
+INFO: [VRFC 10-2458] undeclared symbol HSEL_NOMAP, assumed default net type wire [D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/AHBLITE_SYS.v:179]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/AHBMUX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHBMUX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/AHBTIMER.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHBTIMER
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/AHBUART.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHBUART
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/CORTEXM0DS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CORTEXM0DS
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/baudgen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BAUDGEN
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/cortexm0ds_logic.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cortexm0ds_logic
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIFO
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/pb_debounce.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pb_debounce
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/prescaler.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prescaler
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/uart_rx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module UART_RX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/uart_tx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module UART_TX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sim_1/new/test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/jiedan/cortex_m0_c_prog/cortex_m0.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/jiedan/cortex_m0_c_prog/cortex_m0.sim/sim_1/behav/xsim'
+"xelab -wto 370e047d86104c4887e7b1ae0d65f394 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado2020/az/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 370e047d86104c4887e7b1ae0d65f394 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3180] cannot find port 'RESET' on this module [D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sim_1/new/test.v:30]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/jiedan/cortex_m0_c_prog/cortex_m0.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/jiedan/cortex_m0_c_prog/cortex_m0.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 5278.879 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/jiedan/cortex_m0_c_prog/cortex_m0.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/vivado2020/az/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'D:/jiedan/cortex_m0_c_prog/cortex_m0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/jiedan/cortex_m0_c_prog/cortex_m0.sim/sim_1/behav/xsim/code_led.hex'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/jiedan/cortex_m0_c_prog/cortex_m0.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/jiedan/cortex_m0_c_prog/cortex_m0.sim/sim_1/behav/xsim'
+"xelab -wto 370e047d86104c4887e7b1ae0d65f394 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado2020/az/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 370e047d86104c4887e7b1ae0d65f394 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3180] cannot find port 'RESET' on this module [D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sim_1/new/test.v:30]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/jiedan/cortex_m0_c_prog/cortex_m0.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/jiedan/cortex_m0_c_prog/cortex_m0.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 19 10:37:39 2021...

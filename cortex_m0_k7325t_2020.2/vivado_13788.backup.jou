@@ -1,0 +1,290 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Feb 18 17:17:22 2021
+# Process ID: 13788
+# Current directory: D:/jiedan/cortex_m0_c_prog
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8588 D:\jiedan\cortex_m0_c_prog\cortex_m0.xpr
+# Log file: D:/jiedan/cortex_m0_c_prog/vivado.log
+# Journal file: D:/jiedan/cortex_m0_c_prog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/jiedan/cortex_m0_c_prog/cortex_m0.xpr
+report_ip_status -name ip_status 
+update_compile_order -fileset sources_1
+upgrade_ip -srcset clk_wiz_0 -vlnv xilinx.com:ip:clk_wiz:6.0 [get_ips  clk_wiz_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips clk_wiz_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+update_compile_order -fileset sources_1
+open_run impl_1
+close_design
+copy_run -name impl_1_copy_1 [get_runs impl_1] -parent_run synth_1
+set_property part xc7k325tffg676-2 [current_project]
+reset_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+reset_run clk_wiz_0_synth_1
+current_run [get_runs impl_1_copy_1]
+delete_runs "impl_1"
+set_property part xc7k325tffg676-2 [get_runs impl_1_copy_1]
+set_property name impl_k7 [get_runs impl_1_copy_1]
+launch_runs impl_k7 -jobs 12
+wait_on_run impl_k7
+reset_run synth_1
+reset_run clk_wiz_0_synth_1
+upgrade_ip -srcset clk_wiz_0 -vlnv xilinx.com:ip:clk_wiz:6.0 [get_ips  clk_wiz_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips clk_wiz_0] -no_script -sync -force -quiet
+set_property -dict [list CONFIG.PRIMITIVE {MMCM} CONFIG.PRIM_IN_FREQ {50.000} CONFIG.CLKIN1_JITTER_PS {200.0} CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT2_DRIVES {BUFG} CONFIG.CLKOUT3_DRIVES {BUFG} CONFIG.CLKOUT4_DRIVES {BUFG} CONFIG.CLKOUT5_DRIVES {BUFG} CONFIG.CLKOUT6_DRIVES {BUFG} CONFIG.CLKOUT7_DRIVES {BUFG} CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_BANDWIDTH {OPTIMIZED} CONFIG.MMCM_CLKFBOUT_MULT_F {18.250} CONFIG.MMCM_CLKIN1_PERIOD {20.000} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.MMCM_COMPENSATION {ZHOLD} CONFIG.MMCM_CLKOUT0_DIVIDE_F {36.500} CONFIG.CLKOUT1_JITTER {244.752} CONFIG.CLKOUT1_PHASE_ERROR {159.385}] [get_ips clk_wiz_0]
+generate_target all [get_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+export_ip_user_files -of_objects [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+launch_runs clk_wiz_0_synth_1 -jobs 12
+wait_on_run clk_wiz_0_synth_1
+export_simulation -of_objects [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory D:/jiedan/cortex_m0_c_prog/cortex_m0.ip_user_files/sim_scripts -ip_user_files_dir D:/jiedan/cortex_m0_c_prog/cortex_m0.ip_user_files -ipstatic_source_dir D:/jiedan/cortex_m0_c_prog/cortex_m0.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/modelsim} {questa=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/questa} {riviera=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/riviera} {activehdl=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_runs impl_k7 -jobs 12
+wait_on_run impl_k7
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/constrs_1/new/top.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/constrs_1/new/top.xdc
+file delete -force D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/constrs_1/new/top.xdc
+reset_run synth_1
+launch_runs impl_k7 -jobs 12
+wait_on_run impl_k7
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {20.000} CONFIG.MMCM_CLKFBOUT_MULT_F {20.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {50.000} CONFIG.CLKOUT1_JITTER {249.363} CONFIG.CLKOUT1_PHASE_ERROR {164.985}] [get_ips clk_wiz_0]
+generate_target all [get_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+export_ip_user_files -of_objects [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_0_synth_1
+launch_runs clk_wiz_0_synth_1 -jobs 12
+wait_on_run clk_wiz_0_synth_1
+export_simulation -of_objects [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory D:/jiedan/cortex_m0_c_prog/cortex_m0.ip_user_files/sim_scripts -ip_user_files_dir D:/jiedan/cortex_m0_c_prog/cortex_m0.ip_user_files -ipstatic_source_dir D:/jiedan/cortex_m0_c_prog/cortex_m0.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/modelsim} {questa=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/questa} {riviera=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/riviera} {activehdl=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_k7 -jobs 12
+wait_on_run impl_k7
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_k7 -jobs 12
+wait_on_run impl_k7
+reset_run synth_1
+launch_runs impl_k7 -jobs 12
+wait_on_run impl_k7
+open_run impl_k7
+close_design
+reset_run synth_1
+launch_runs impl_k7 -jobs 12
+wait_on_run impl_k7
+open_run impl_k7
+close_design
+set_property -dict [list CONFIG.RESET_TYPE {ACTIVE_LOW} CONFIG.RESET_PORT {resetn}] [get_ips clk_wiz_0]
+generate_target all [get_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+export_ip_user_files -of_objects [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_0_synth_1
+launch_runs clk_wiz_0_synth_1 -jobs 12
+wait_on_run clk_wiz_0_synth_1
+export_simulation -of_objects [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory D:/jiedan/cortex_m0_c_prog/cortex_m0.ip_user_files/sim_scripts -ip_user_files_dir D:/jiedan/cortex_m0_c_prog/cortex_m0.ip_user_files -ipstatic_source_dir D:/jiedan/cortex_m0_c_prog/cortex_m0.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/modelsim} {questa=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/questa} {riviera=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/riviera} {activehdl=D:/jiedan/cortex_m0_c_prog/cortex_m0.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_k7 -jobs 12
+wait_on_run impl_k7
+open_run impl_k7
+set_property IOSTANDARD LVCMOS33 [get_ports [list {LED[7]} {LED[6]} {LED[5]} {LED[4]} {LED[3]} {LED[2]} {LED[1]} {LED[0]}]]
+place_ports {LED[7]} E25
+place_ports {LED[6]} D25
+place_ports {LED[5]} D24
+place_ports {LED[4]} C26
+place_ports {LED[3]} C24
+place_ports {LED[2]} D23
+place_ports {LED[1]} A24
+place_ports {LED[0]} A23
+place_ports CLK G22
+place_ports btn D26
+place_ports rst_n G25
+set_property IOSTANDARD LVCMOS33 [get_ports [list btn]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list CLK]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list rst_n]]
+place_ports rx B17
+place_ports tx A17
+set_property IOSTANDARD LVCMOS33 [get_ports [list rx]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list tx]]
+close [ open D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/constrs_1/new/m0.xdc w ]
+add_files -fileset constrs_1 D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/constrs_1/new/m0.xdc
+set_property target_constrs_file D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/constrs_1/new/m0.xdc [current_fileset -constrset]
+save_constraints -force
+close_design
+reset_run synth_1
+launch_runs impl_k7 -to_step write_bitstream -jobs 12
+wait_on_run impl_k7
+reset_run synth_1
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/software/code.hex] -no_script -reset -force -quiet
+remove_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/software/code.hex
+file delete -force D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/software/code.hex
+import_files -norecurse D:/jiedan/cortex_m0_c_prog/code.hex
+set_property file_type {Memory Initialization Files} [get_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code.hex]
+launch_runs impl_k7 -to_step write_bitstream -jobs 12
+wait_on_run impl_k7
+reset_run synth_1
+launch_runs impl_k7 -to_step write_bitstream -jobs 12
+wait_on_run impl_k7
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+close_hw_manager
+update_files -from_files D:/jiedan/cortex_m0_c_prog/code_uart.hex -to_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code.hex -filesets [get_filesets *]
+reset_run synth_1
+launch_runs impl_k7 -to_step write_bitstream -jobs 12
+wait_on_run impl_k7
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+close_hw_manager
+open_run impl_k7
+close_design
+open_run impl_k7
+show_objects -name memory [get_cells -hierarchical -filter { PRIMITIVE_TYPE =~ CARRY.*.* } ]
+close_design
+open_run impl_k7
+show_objects [get_cells -hierarchical -filter { PRIMITIVE_TYPE =~ DMEM.dram.* } ]
+close_design
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/AHBVGASYS.v] -no_script -reset -force -quiet
+remove_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/AHBVGASYS.v
+file delete -force D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/AHBVGASYS.v
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/vga_sync.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/vga_console.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/vga_image.v] -no_script -reset -force -quiet
+remove_files  {D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/vga_sync.v D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/vga_console.v D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/vga_image.v}
+file delete -force D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/vga_sync.v D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/vga_console.v D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/vga_image.v
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/counter.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/dual_port_ram_sync.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/font_rom.v] -no_script -reset -force -quiet
+remove_files  {D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/counter.v D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/dual_port_ram_sync.v D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/font_rom.v}
+file delete -force D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/counter.v D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/dual_port_ram_sync.v D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/source/VGA/font_rom.v
+update_files -from_files D:/jiedan/cortex_m0_c_prog/code_uart.hex -to_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code_uart.hex -filesets [get_filesets *]
+reset_run impl_k7 -prev_step 
+launch_runs impl_k7 -to_step write_bitstream -jobs 12
+wait_on_run impl_k7
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+close_hw_manager
+update_files -from_files D:/jiedan/cortex_m0_c_prog/code_uartb.hex -to_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code_uart.hex -filesets [get_filesets *]
+reset_run synth_1
+launch_runs impl_k7 -to_step write_bitstream -jobs 12
+wait_on_run impl_k7
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+close_hw_manager
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code_uartb.hex] -no_script -reset -force -quiet
+remove_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code_uartb.hex
+file delete -force D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code_uartb.hex
+import_files -force -norecurse D:/jiedan/cortex_m0_c_prog/code.hex
+set_property file_type {Memory Initialization Files} [get_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code.hex]
+reset_run synth_1
+launch_runs impl_k7 -to_step write_bitstream -jobs 12
+wait_on_run impl_k7
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+close_hw_manager
+open_hw_manager
+close_hw_manager
+open_hw_manager
+close_hw_manager
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code.hex] -no_script -reset -force -quiet
+remove_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code.hex
+file delete -force D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code.hex
+import_files -norecurse D:/jiedan/cortex_m0_c_prog/code.hex
+set_property file_type {Memory Initialization Files} [get_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code.hex]
+reset_run impl_k7 -prev_step 
+launch_runs impl_k7 -to_step write_bitstream -jobs 12
+wait_on_run impl_k7
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+close_hw_manager
+reset_run impl_k7
+launch_runs impl_k7 -jobs 12
+wait_on_run impl_k7
+launch_runs impl_k7 -to_step write_bitstream -jobs 12
+wait_on_run impl_k7
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+close_hw_manager
+export_ip_user_files -of_objects  [get_files D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code.hex] -no_script -reset -force -quiet
+remove_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code.hex
+file delete -force D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code.hex
+import_files -norecurse D:/jiedan/cortex_m0_c_prog/code_led.hex
+set_property file_type {Memory Initialization Files} [get_files  D:/jiedan/cortex_m0_c_prog/cortex_m0.srcs/sources_1/imports/cortex_m0_c_prog/code_led.hex]
+reset_run synth_1
+launch_runs impl_k7 -to_step write_bitstream -jobs 12
+wait_on_run impl_k7
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {D:/jiedan/cortex_m0_c_prog/cortex_m0.runs/impl_k7/AHBLITE_SYS.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+close_hw_manager
+launch_simulation
+launch_simulation
